@@ -1,4 +1,4 @@
-<?php namespace Golonka\BBCode;
+<?php namespace Guiz\BBCode;
 
 class BBCodeParser {
 
