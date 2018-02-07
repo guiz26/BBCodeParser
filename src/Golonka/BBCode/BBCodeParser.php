@@ -4,19 +4,23 @@ class BBCodeParser {
 
     private $availableParsers = array(
         'bold' => array(
-            'pattern' => '/\[b\](.*)\[\/b\]/', 
+            'pattern' => '/\[b\](.*?)\[\/b\]/is', 
             'replace' => '<strong>$1</strong>'
         ),
+        'image' => array(
+            'pattern' => '~\[img=?(\d+)?x?(\d+)?\](.*?)\[/img\]~s', 
+            'replace' => '<img width="$1" height="$2" src="$3" />'
+        ),
         'italic' => array(
-            'pattern' => '/\[i\](.*)\[\/i\]/', 
+            'pattern' => '/\[i\](.*?)\[\/i\]/is', 
             'replace' => '<em>$1</em>'
         ),
         'underLine' => array(
-            'pattern' => '/\[u\](.*)\[\/u\]/', 
+            'pattern' => '/\[u\](.*?)\[\/u\]/is', 
             'replace' => '<u>$1</u>'
         ),
         'lineThrough' => array(
-            'pattern' => '/\[s\](.*)\[\/s\]/', 
+            'pattern' => '/\[s\](.*?)\[\/s\]/is', 
             'replace' => '<strike>$1</strike>'
         ),
         'fontSize' => array(
@@ -28,7 +32,7 @@ class BBCodeParser {
             'replace' => '<font color="$1">$2</font>'
         ),
         'center' => array(
-            'pattern' => '/\[center\](.*)\[\/center\]/', 
+            'pattern' => '/\[center\](.*?)\[\/center\]/is', 
             'replace' => '<div style="text-align:center;">$1</div>'
         ),
         'quote' => array(
@@ -40,16 +44,12 @@ class BBCodeParser {
             'replace' => '<blockquote><small>$1</small>$2</blockquote>'
         ),
         'link' => array(
-            'pattern' => '/\[url\](.*)\[\/url\]/', 
+            'pattern' => '/\[url\](.*?)\[\/url\]/is', 
             'replace' => '<a href="$1">$1</a>'
         ),
         'namedLink' => array(
-            'pattern' => '/\[url\=(.*)\](.*)\[\/url\]/', 
+            'pattern' => '/\[url=(.+?)\](.+?)\[\/url\]/i', 
             'replace' => '<a href="$1">$2</a>'
-        ),
-        'image' => array(
-            'pattern' => '/\[img\](.*)\[\/img\]/', 
-            'replace' => '<img src="$1">'
         ),
         'orderedList' => array(
             'pattern' => '/\[ol\](.*)\[\/ol\]/s', 
