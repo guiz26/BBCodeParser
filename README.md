@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/golonka/BBCodeParser.png?branch=master)](https://travis-ci.org/golonka/BBCodeParser)
-
 # BBCodeParser
 BBCodeParser is a standalone library that parses all(?) the common bbcode tags.
 The easiest way to install is via composer and is equally as easy to integrate into Laravel 4
@@ -31,10 +29,10 @@ If you don´t now what composer is or how you use it you can find more informati
 
 ### Composer
 
-You can find the BBCodeParser class via [Packagist](https://packagist.org/packages/golonka/bbcodeparser).
+You can find the BBCodeParser class via [Packagist](https://packagist.org/packages/guiz26/bbcodeparser).
 Require the package in your `` composer.json `` file.
 
-    "golonka/bbcodeparser": "1.0.*"
+    "guiz/bbcodeparser": "1.0.*"
 
 Then you run install or update to download your new requirement
 
@@ -52,7 +50,7 @@ Now you are able to require the vendor/autoload.php file to PSR-0 autoload the l
     require 'vendor/autoload.php';
     
     // import the BBCodeParser Class
-    use Golonka\BBCode\BBCodeParser;
+    use Guiz\BBCode\BBCodeParser;
 
     // Lets parse!
     $bbcode = BBCodeParser::parse('[b]Bold[/b]');
@@ -67,11 +65,11 @@ Open your Laravel config file config/app.php and add the following lines.
 
 In the ``$providers `` array add the service providers for this package.
 
-    'Golonka\BBCode\BBCodeParserServiceProvider'
+    'Guiz\BBCode\BBCodeParserServiceProvider'
 
 Add the facade of this package to the `` $aliases `` array.
 
-    'BBCode' => 'Golonka\BBCode\Facades\BBCodeParser'
+    'BBCode' => 'Guiz\BBCode\Facades\BBCodeParser'
 
 Now the BBCodeParser Class will be auto-loaded by Laravel.
 

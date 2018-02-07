@@ -1,6 +1,6 @@
 <?php
 
-use \Golonka\BBCode\BBCodeParser;
+use \Guiz\BBCode\BBCodeParser;
 
 class BBCodeParserTest extends PHPUnit_Framework_TestCase {
 

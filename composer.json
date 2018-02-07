@@ -1,15 +1,14 @@
 {
-    "name": "golonka/bbcodeparser",
-    "description": "Parse your BBCode easy with this library.",
+    "name": "guiz/bbcodeparser",
+    "description": "Parse your BBCode easy with this library. (Fork dead repo Golanka)",
     "keywords": ["bbcode", "parser", "laravel"],
-    "homepage": "http://github.com/golonka/bbcodeparser",
+    "homepage": "https://github.com/guiz26/BBCodeParser",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Joseph Landberg",
-            "email": "joseph.landberg@gt5.se",
-            "homepage": "http://gt5.se"
+            "name": "Remi Poulie",
+            "email": "guiz26@gmail.com"
         }
     ],
     "require": {
@@ -19,7 +18,7 @@
         "phpunit/phpunit": "3.7.21"
     },
     "autoload": {
-        "psr-0": {"Golonka\\BBCode": "src/"}
+        "psr-0": {"Guiz\\BBCode": "src/"}
     },
     "minimum-stability": "dev"
 }
